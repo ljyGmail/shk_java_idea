@@ -15,6 +15,11 @@ public class MethodTest {
         p1.eat();
 
         p1.info();
+
+        p1.sleep(8);
+
+        String info = p1.interests("编程");
+        System.out.println(info);
     }
 }
 

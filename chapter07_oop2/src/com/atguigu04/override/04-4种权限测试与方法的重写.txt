@@ -1,0 +1,6 @@
+
+一、测试4种权限修饰
+在com.atguigu04.override包下创建两个package: test1和test2，测试Java中提供的4种权限修饰。
+
+实际开发中，各权限修饰的使用频率是怎样的？
+public、private是使用频率最高的！

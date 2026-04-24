@@ -1,0 +1,18 @@
+
+Object类的概述
+
+1. Object类的说明
+> 明确: java.lang.Object
+> 任何一个Java类(除Object类)都直接或间接地继承于Object类。
+> Object类称为Java类的根父类。
+> Object类中声明的结构(属性、方法等)就具有通用性。
+    > Object类中没有声明属性。
+    > Object类中提供了一个空参的构造器。
+    > 重点关注: Object类中声明的方法。
+
+2. 常用方法
+    重点方法: equals() \ toString()。
+    了解方法: clone() \ finalize()。
+    目前不需要关注: getClass() \ hashCode() \ notify() \ notifyAll() \ wait() \ wait(xx) \ wait(xx, yy)
+
+面试题: final、finally、finalize的区别。

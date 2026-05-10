@@ -1,0 +1,33 @@
+
+JUnit单元测试的使用
+
+1. 需要导入的jar包:
+> JUnit4
+
+2. 导入步骤
+使用IDEA直接导入
+
+3. 创建单元测试类，进行测试
+见代码
+
+4. (重点关注)想要能正确地编写单元测试方法，需要满足:
+- 所在的类必须是public的，非抽象的，包含唯一的无参构造器。
+- @Test标记的方法本身必须是public，非抽象的，非静态的，void无返回值，()无参数的。
+
+5. 默认情况下，单元测试方法中使用Scanner实效。如何解决？
+菜单Help -> Edit Custom VM options...中加入下面的内容:
+    -Deditable.java.test.console=true
+
+6. 大家可以将单元测试方法设置为一个模板。
+步骤:
+    - Command + , 进入设置 -> Editor -> Live Templates
+    - 点击 + 创建一个组: CustomDefine。
+    - 在创建好的组中创建一个Live Template。
+    - 在Abbreviation中输入'test'，在Description中输入'自动生成单元测试的方法'。
+    - 在Template Text中输入如下内容:
+        @Test
+        public void test$var1$() {
+            $end$
+        }
+    - 点击下方的Define文本按钮后，选择Java。
+    - 点击OK。

@@ -1,4 +1,4 @@
-package com.atguigu05.exer;
+package com.atguigu05.exer.exer1;
 
 public class Circle {
     private double radius; // 半径

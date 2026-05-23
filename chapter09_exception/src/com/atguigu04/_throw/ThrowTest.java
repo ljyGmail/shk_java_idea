@@ -45,7 +45,9 @@ class Student {
         } else {
             // System.out.println("输入的id非法");
             // 手动抛出异常类的对象
-            throw new Exception("输入的id非法");
+            // throw new Exception("输入的id非法");
+            // throw new String(); // 报错
+            throw new BelowZeroException("输入的id非法");
             // System.out.println("此语句不能被执行");
         }
     }

@@ -41,7 +41,30 @@ public class PrintNumberTest {
         // t2.start();
 
         // 方式2: 创建Thread类的匿名子类的匿名对象。
-        new Thread() {
+        // new Thread() {
+        //     @Override
+        //     public void run() {
+        //         for (int i = 1; i <= 100; i++) {
+        //             if (i % 2 == 0) {
+        //                 System.out.println(Thread.currentThread().getName() + ": " + i);
+        //             }
+        //         }
+        //     }
+        // }.start();
+
+        // new Thread() {
+        //     @Override
+        //     public void run() {
+        //         for (int i = 1; i <= 100; i++) {
+        //             if (i % 2 != 0) {
+        //                 System.out.println(Thread.currentThread().getName() + "--> " + i);
+        //             }
+        //         }
+        //     }
+        // }.start();
+
+        // 方式3: 使用实现Runnable接口的方式，提供了Runnable接口的匿名实现类的匿名对象。
+        new Thread(new Runnable() {
             @Override
             public void run() {
                 for (int i = 1; i <= 100; i++) {
@@ -50,9 +73,9 @@ public class PrintNumberTest {
                     }
                 }
             }
-        }.start();
+        }).start();
 
-        new Thread() {
+        new Thread(new Runnable() {
             @Override
             public void run() {
                 for (int i = 1; i <= 100; i++) {
@@ -61,6 +84,6 @@ public class PrintNumberTest {
                     }
                 }
             }
-        }.start();
+        }).start();
     }
 }
